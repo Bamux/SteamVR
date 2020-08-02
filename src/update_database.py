@@ -84,6 +84,7 @@ def get_vrgames_players(appid):
         "Connection": "keep-alive",
         "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
     }
+    print(url)
     json_data = json.loads(requests.get(url, headers=headers).text)
     if json_data["success"]:
         players = date_each_day(appid, json_data)

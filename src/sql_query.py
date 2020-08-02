@@ -113,7 +113,7 @@ def peak_players():
     Select new_date, sum(average) from (SELECT strftime('%Y-%m', date) as new_date,
     sum(players)/(julianday(date,'start of month','+1 month') - julianday(date,'start of month'))
     as average from vr_players
-    WHERE date != '2019-07-24' and date > '2016-03' and date < date('now','start of month')
+    WHERE date != '2019-07-24' and date > '2016-09' and date < date('now','start of month')
     GROUP by appid, new_date
     ORDER by new_date)
     Group by new_date
